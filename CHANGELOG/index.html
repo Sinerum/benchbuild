@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="simbuerg">
+  <link rel="canonical" href="https://polyjit.github.io/benchbuild/CHANGELOG/">
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Release Notes - BenchBuild</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+  <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+  <link href="../css/pheasant.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Release Notes";
+    var mkdocs_page_input_path = "CHANGELOG.md";
+    var mkdocs_page_url = "/benchbuild/CHANGELOG/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/json.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> BenchBuild</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="..">BenchBuild Documentation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../basics/">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../basics/configuration/">Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../basics/containers/">Containers</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../basics/actions/">Actions</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Concepts</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../concepts/source/">Source</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../concepts/environments/">Environment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../concepts/projects/">Project</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../concepts/experiments/">Experiment</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../advanced/">SLURM</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../advanced/cli/">Cli</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Release Notes</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#features">Features</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#bug-fixes">Bug Fixes</a>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">BenchBuild</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>About &raquo;</li>
+        
+      
+    
+    <li>Release Notes</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                
+<p><a name=""></a></p>
+<h2 id="2021-09-15">(2021-09-15)</h2>
+<h4 id="features">Features</h4>
+<ul>
+<li><strong>environments:</strong>  add an interactive mode for container runs. (<a href="https://github.com/PolyJIT/benchbuild/commit/c03738cd90b9ea0ecc683b6c3785cfc6ce940f50">c03738cd</a>)</li>
+<li><strong>log:</strong>  add force_tty switch to control RichHandler. (#435) (<a href="https://github.com/PolyJIT/benchbuild/commit/fe91f81c3199ca8f5361827a669ba4dc8123567b">fe91f81c</a>)</li>
+<li><strong>source:</strong>  update git remote revisions. (#434) (<a href="https://github.com/PolyJIT/benchbuild/commit/6899f2de941e926760bbd2f7abce77d1aabb8f80">6899f2de</a>)</li>
+<li><strong>utils/run:</strong>  add unbuffered watch commands (<a href="https://github.com/PolyJIT/benchbuild/commit/0b4bd04c0f18c1f794620bff3319b95a6345a18a">0b4bd04c</a>)</li>
+</ul>
+<h4 id="bug-fixes">Bug Fixes</h4>
+<ul>
+<li><strong>environments:</strong>  pass format string to logging call (#427) (<a href="https://github.com/PolyJIT/benchbuild/commit/bf52f27ee9b6a03b3599dd8538d2360776200c8c">bf52f27e</a>)</li>
+<li><strong>logging:</strong>  make rich log to stderr by default (#415) (<a href="https://github.com/PolyJIT/benchbuild/commit/7a59868ec9f72fbd561dd6b246d3887687890c76">7a59868e</a>, closes <a href="https://github.com/PolyJIT/benchbuild/issues/412">#412</a>)</li>
+<li><strong>schema:</strong>  silence SAWarning about caching (#428) (<a href="https://github.com/PolyJIT/benchbuild/commit/f9d6ecabf9b59a5a82d2de0032d6058e65cce9d9">f9d6ecab</a>)</li>
+<li><strong>settings:</strong>  BB_ENV is ignored when no config file is loaded" (#414) (<a href="https://github.com/PolyJIT/benchbuild/commit/28d4c52f4409e5ad7a78b0edc117cb2c92e760d3">28d4c52f</a>)</li>
+<li><strong>sources:</strong>  do not use protocol class as ABC (<a href="https://github.com/PolyJIT/benchbuild/commit/2545684c6811e410b34957135fdb4b1402d58e11">2545684c</a>)</li>
+</ul>
+<p><a name=""></a></p>
+<h2 id="62">6.2</h2>
+<h4 id="bug-fixes_1">Bug Fixes</h4>
+<ul>
+<li>use correct schema version (<a href="https://github.com/PolyJIT/benchbuild/commit/beb9907e291df020c39f0ca364fedfde669bb01b">beb9907e</a>)</li>
+<li><strong>environments:</strong>  notify the user, if image creation fails (<a href="https://github.com/PolyJIT/benchbuild/commit/ab43787e9f3cb1dd12b42469e9eabd1dcb721753">ab43787e</a>)</li>
+<li><strong>project:</strong>  do not track project classes twice (<a href="https://github.com/PolyJIT/benchbuild/commit/4991ed99015fe64ba347add1e1081ae884c47d4b">4991ed99</a>, closes <a href="https://github.com/PolyJIT/benchbuild/issues/390">#390</a>)</li>
+<li><strong>settings:</strong></li>
+<li>unbreak test cases. (<a href="https://github.com/PolyJIT/benchbuild/commit/02745c46ce1a8d27d5f92b737b002c9fb9240e21">02745c46</a>)</li>
+<li>consistent settings behavior. (<a href="https://github.com/PolyJIT/benchbuild/commit/25bfdd80e2ff4ab8e6fb85c2de75cf8b72c5b4b2">25bfdd80</a>)</li>
+</ul>
+<p><a name=""></a></p>
+<h2 id="61">6.1</h2>
+<h4 id="bug-fixes_2">Bug Fixes</h4>
+<ul>
+<li>do not use global state to conffigure buildah/podman (<a href="https://github.com/PolyJIT/benchbuild/commit/34d0aa266e55544c310c3387595553d8c8c3337e">34d0aa26</a>)</li>
+<li><strong>ci:</strong>  typo. (<a href="https://github.com/PolyJIT/benchbuild/commit/93ca8ee4857a9dc65f909e7c5c81b6f6e1bf5dcb">93ca8ee4</a>)</li>
+<li><strong>cli/project:</strong></li>
+<li>annotate print_layers (<a href="https://github.com/PolyJIT/benchbuild/commit/8d3b1531fa8c521898a790e41ac63dc61c41e714">8d3b1531</a>)</li>
+<li>add neutral element for multiplication with reduce (<a href="https://github.com/PolyJIT/benchbuild/commit/0bbf5664efb9dd1c20373b2c00f44c0f4f518630">0bbf5664</a>)</li>
+<li><strong>environments:</strong></li>
+<li>unshallow git clones before dissociating (<a href="https://github.com/PolyJIT/benchbuild/commit/21aac7ce199b479b694c610a158650e605e583ea">21aac7ce</a>)</li>
+<li>remove left-over parameters (<a href="https://github.com/PolyJIT/benchbuild/commit/6f3b2a8e057eee41fa33456e13b6d63da1dc5c5b">6f3b2a8e</a>)</li>
+<li>do not overwrite exported images. (<a href="https://github.com/PolyJIT/benchbuild/commit/31da2ad7a31a4ebed7c8d02a8e261522a8e1a845">31da2ad7</a>, closes <a href="https://github.com/PolyJIT/benchbuild/issues/397">#397</a>)</li>
+<li>remove optional image name argument from podman load (<a href="https://github.com/PolyJIT/benchbuild/commit/c9bb2357a7f1b10c6ca9578a921c6a82f114746b">c9bb2357</a>, closes <a href="https://github.com/PolyJIT/benchbuild/issues/398">#398</a>)</li>
+<li>reuse same status bar structure for all other cli subcommands (<a href="https://github.com/PolyJIT/benchbuild/commit/256252f8daebc8ec51bd01b24d12873c320e746e">256252f8</a>)</li>
+<li>mypy warnings (<a href="https://github.com/PolyJIT/benchbuild/commit/8f016d17407d62e12b8d9258de4f3f172772e783">8f016d17</a>)</li>
+<li>fix mypy/pylint annotations. (<a href="https://github.com/PolyJIT/benchbuild/commit/379114c3b09812992a4043f7dd327ace3bfa7002">379114c3</a>)</li>
+<li>split return turple and baild out on error (<a href="https://github.com/PolyJIT/benchbuild/commit/57d8e84c0b7245d8d73f97fb86314c9fd23d5731">57d8e84c</a>)</li>
+<li>mypy warnings (<a href="https://github.com/PolyJIT/benchbuild/commit/b514cc56e27b8250732cd3ce516256e993d16b16">b514cc56</a>)</li>
+<li>add missing type conversion (<a href="https://github.com/PolyJIT/benchbuild/commit/5211858c00b5c1d715148e8afce021c5f31907c2">5211858c</a>, closes <a href="https://github.com/PolyJIT/benchbuild/issues/388">#388</a>)</li>
+<li>rework typing annotations for handlers (<a href="https://github.com/PolyJIT/benchbuild/commit/100773ca2bac7d10e128149efd12a55a5876c2e9">100773ca</a>)</li>
+<li>fix linter/mypy warnings (<a href="https://github.com/PolyJIT/benchbuild/commit/6d1b5e35e9171d3079b6f86985fed4e6c8ba851b">6d1b5e35</a>)</li>
+<li>make Add &amp; Copy layers hashable (<a href="https://github.com/PolyJIT/benchbuild/commit/2a38dced58a8c4a658774aaabb7758ee762a2dc1">2a38dced</a>)</li>
+<li>add missing sys import (<a href="https://github.com/PolyJIT/benchbuild/commit/8ca2cb37f10c71144f644bfd10202822e8b95203">8ca2cb37</a>)</li>
+<li>import Protocol from typing_extensions, if python &lt;= 3.8 (<a href="https://github.com/PolyJIT/benchbuild/commit/5d3577a70e483c3f9940656fe0b266d6a5a1c364">5d3577a7</a>)</li>
+<li>handle 'None' for MaybeContainer return type (<a href="https://github.com/PolyJIT/benchbuild/commit/1dc0aeef0334570fecad6ac17d3ad7d08c770116">1dc0aeef</a>)</li>
+<li>deal with multi-line container ids (<a href="https://github.com/PolyJIT/benchbuild/commit/fdfd53422ce0fd4f7e8935c3ff37afaaabc0ba8f">fdfd5342</a>)</li>
+<li>do not spawn the FromLayer (<a href="https://github.com/PolyJIT/benchbuild/commit/265c623ee707bfd5a2a76814bb9e620b78381125">265c623e</a>)</li>
+<li>explicitly state remote registry location (<a href="https://github.com/PolyJIT/benchbuild/commit/84a591cc80d76beaebb2b968bba03c75581ee46f">84a591cc</a>)</li>
+<li><strong>project:</strong>  project registration for groups (<a href="https://github.com/PolyJIT/benchbuild/commit/6383d13edd6cbd638b30dea6842b6fc480113b5e">6383d13e</a>)</li>
+<li><strong>slurm:</strong></li>
+<li>fix pylint/mypy (<a href="https://github.com/PolyJIT/benchbuild/commit/ddc06db941eecbe2b4c34a911fbd0712949eee65">ddc06db9</a>)</li>
+<li>do not modify slurm_node_dir (<a href="https://github.com/PolyJIT/benchbuild/commit/be33d9a8bdd25f949ae7525d7cad88f6d6737743">be33d9a8</a>)</li>
+<li><strong>sources:</strong>  unshallow only when needed (<a href="https://github.com/PolyJIT/benchbuild/commit/6e0ae20ce8fe3936d24368b66123e3bc3b1df131">6e0ae20c</a>)</li>
+<li><strong>x264:</strong>  use local name of source for lookup (<a href="https://github.com/PolyJIT/benchbuild/commit/754718fc5f65d6197d8dadace620b0f19706f9bf">754718fc</a>, closes <a href="https://github.com/PolyJIT/benchbuild/issues/356">#356</a>)</li>
+</ul>
+<h4 id="features_1">Features</h4>
+<ul>
+<li>tune down rich's custom log format (<a href="https://github.com/PolyJIT/benchbuild/commit/04fbe347cb3739893336d007e6376804576bc202">04fbe347</a>)</li>
+<li>add support for --export and --import flags in containers (<a href="https://github.com/PolyJIT/benchbuild/commit/c18b71991949efc79ea432828f23e29b999a687e">c18b7199</a>)</li>
+<li><strong>cli/project:</strong></li>
+<li>add details view for a single project (<a href="https://github.com/PolyJIT/benchbuild/commit/87c53e8d214eb47012546e0174f52c1350b61c36">87c53e8d</a>)</li>
+<li>change project view to a condensed format (<a href="https://github.com/PolyJIT/benchbuild/commit/7af65f194227f68b876ecd7f7f38b59e6edc4c0f">7af65f19</a>)</li>
+<li><strong>environments:</strong></li>
+<li>just print env var name as error message (<a href="https://github.com/PolyJIT/benchbuild/commit/b9044ef332a2d04df110b40b27e9c172c505a856">b9044ef3</a>)</li>
+<li>warn the user about too long paths for libpod (<a href="https://github.com/PolyJIT/benchbuild/commit/325b5003dcb564e11153cb9ba01c2bf97493b5ff">325b5003</a>)</li>
+<li>enable debugging of failed image builds (<a href="https://github.com/PolyJIT/benchbuild/commit/4c0e5ccd922c8061f0b58f1d74812ac5c1b03e74">4c0e5ccd</a>)</li>
+<li>provide more consistent output through rich (<a href="https://github.com/PolyJIT/benchbuild/commit/3982228d2bbdb93a3130ce660e485c4f519e9563">3982228d</a>)</li>
+<li>add 'rmi' subcommand to delete images. (<a href="https://github.com/PolyJIT/benchbuild/commit/80e239c6663e628c6e14e1a09a73f7531d084041">80e239c6</a>)</li>
+<li>make an error message stand out more clearly (<a href="https://github.com/PolyJIT/benchbuild/commit/c5248f8a8584086973b7ea0c66d6bffc6221499f">c5248f8a</a>)</li>
+<li>add g++ to base image (<a href="https://github.com/PolyJIT/benchbuild/commit/e20c572cb7580e94d19776f476748fc8f494c45e">e20c572c</a>)</li>
+<li>split image_exists into 2 implementations (<a href="https://github.com/PolyJIT/benchbuild/commit/73d76d38d63c5ac3792aee04c5454a83c82ac91c">73d76d38</a>)</li>
+<li>split containers cli into 2 entitie (<a href="https://github.com/PolyJIT/benchbuild/commit/6c3167d6f1a747e0e50638e3a9fd4204f23cea9e">6c3167d6</a>)</li>
+<li>add basic error handling to environments (<a href="https://github.com/PolyJIT/benchbuild/commit/b711386ec0e31485d65e9c12c8dee68178e11dd9">b711386e</a>)</li>
+<li>emit layer creation events (<a href="https://github.com/PolyJIT/benchbuild/commit/9a7fa1492e102f77c300a5487c03c7484ea26436">9a7fa149</a>)</li>
+<li>print layer construction progress (<a href="https://github.com/PolyJIT/benchbuild/commit/404ac07edbf408b41ec6282d40af5078dd36bd75">404ac07e</a>)</li>
+<li>make layers hashable (<a href="https://github.com/PolyJIT/benchbuild/commit/36432f02c7818ebefc18955bc2da4f85201845f5">36432f02</a>)</li>
+<li>step-wise image construction (<a href="https://github.com/PolyJIT/benchbuild/commit/f5100ec8b5fa20047278bacb328b75cd39b05797">f5100ec8</a>)</li>
+<li>split Repositories and Unit of Work into 2 entities each (<a href="https://github.com/PolyJIT/benchbuild/commit/6b9b9cd2be512facffa088faaa08e37e953ed989">6b9b9cd2</a>)</li>
+<li>add option to replace container images (<a href="https://github.com/PolyJIT/benchbuild/commit/33cdac30e752271614dd6c6363d61fa9a3534fe4">33cdac30</a>, closes <a href="https://github.com/PolyJIT/benchbuild/issues/372">#372</a>)</li>
+<li><strong>slurm:</strong>  support variable number of subcommand arguments (<a href="https://github.com/PolyJIT/benchbuild/commit/3df4cbd3c7afbbe00a8c37f1391e2dfe60e4858e">3df4cbd3</a>, closes <a href="https://github.com/PolyJIT/benchbuild/issues/396">#396</a>)</li>
+<li><strong>utils/slurm:</strong>  add customizable SLURM templates (<a href="https://github.com/PolyJIT/benchbuild/commit/31022284f2f492cb0f799309eb893b1a2b599b78">31022284</a>)</li>
+</ul>
+<p><a name="6.0.1"></a></p>
+<h3 id="601-2020-12-29">6.0.1 (2020-12-29)</h3>
+<h4 id="bug-fixes_3">Bug Fixes</h4>
+<ul>
+<li>Avoid useless plugin spam when running with higher verbosity levels (<a href="https://github.com/polyjit/benchbuild/commit/258bed40dafea06b80c119b012515626d5763e99">258bed40</a>, closes <a href="https://github.com/polyjit/benchbuild/issues/354">#354</a>)</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="../advanced/cli/" class="btn btn-neutral" title="Cli"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/PolyJIT/benchbuild" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../advanced/cli/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../js/pheasant.js"></script>
+      <script src="../search/main.js"></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

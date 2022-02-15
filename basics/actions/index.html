@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="simbuerg">
+  <link rel="canonical" href="https://polyjit.github.io/benchbuild/basics/actions/">
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+  <title>Actions - BenchBuild</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../../css/theme.css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+  <link href="//use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" />
+  <link href="//use.fontawesome.com/releases/v5.8.1/css/v4-shims.css" rel="stylesheet" />
+  <link href="../../css/pheasant.css" rel="stylesheet" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Actions";
+    var mkdocs_page_input_path = "basics/actions.md";
+    var mkdocs_page_url = "/benchbuild/basics/actions/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/bash.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/json.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/languages/yaml.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> BenchBuild</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../..">BenchBuild Documentation</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Getting Started</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../">Installation</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../containers/">Containers</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="./">Actions</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#customize-actions">Customize actions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#available-actions">Available Actions</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#step-base">Step (Base)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#clean">Clean</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#makebuilddir">MakeBuildDir</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#compile">Compile</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#run">Run</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#echo">Echo</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#any-group">Any (Group)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#experiment-any-group">Experiment (Any, Group)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#requireall-group">RequireAll (Group)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cleanextra">CleanExtra</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#projectenvironment">ProjectEnvironment</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#setprojectversion">SetProjectVersion</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Concepts</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../concepts/source/">Source</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../concepts/environments/">Environment</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../concepts/projects/">Project</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../concepts/experiments/">Experiment</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">Advanced Usage</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../advanced/">SLURM</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../../advanced/cli/">Cli</a>
+                    </li>
+                </ul>
+                <p class="caption"><span class="caption-text">About</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../../CHANGELOG/">Release Notes</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">BenchBuild</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Getting Started &raquo;</li>
+        
+      
+    
+    <li>Actions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+
+          <div role="main">
+            <div class="section">
+              
+                
+<h1 id="actions">Actions</h1>
+<p>Actions are used to declare the workflow of an experiment. BenchBuild provides
+a set of default actions that should suit most experiments.
+A new experiment can define a new set of actions that should be used per project,
+or use those defaults.</p>
+<h2 id="customize-actions">Customize actions</h2>
+<p>Whenever you define a new expeirment, you have to provide an implementation
+for <code>def actions_for_project(self, project: 'Project')</code>.
+This implementation usually configures extensions on the project and returns
+a set of actions that should be run during execution.</p>
+<p>Example:</p>
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="">def actions_for_project(self, project: &#39;Project&#39;):
+  project.runtime_extension = time.RunWithTime(
+    run.RuntimeExtensions(project, self))
+  project.runtime_extension = time.WithTimeout(
+    run.RunCompiler(project, self))
+
+  return self.default_runtime_actions(project)</code></pre></div>
+<div class="report"><p><span class="count">[1]</span>
+<span class="start"></span> (<span class="time"></span>)
+<span class="right"><span class="option">({ p y t h o n })</span> <span class="kernel"></span> (<span class="total"></span>)</span></p></div></div></div></div>
+
+<p>This takes care of compiling, running and cleanup during experiment execution.</p>
+<h2 id="available-actions">Available Actions</h2>
+<p>The following actions are available out of the box. You can define your own
+actions at any time</p>
+<h3 id="step-base">Step (Base)</h3>
+<h3 id="clean">Clean</h3>
+<h3 id="makebuilddir">MakeBuildDir</h3>
+<h3 id="compile">Compile</h3>
+<h3 id="run">Run</h3>
+<h3 id="echo">Echo</h3>
+<h3 id="any-group">Any (Group)</h3>
+<h3 id="experiment-any-group">Experiment (Any, Group)</h3>
+<h3 id="requireall-group">RequireAll (Group)</h3>
+<h3 id="cleanextra">CleanExtra</h3>
+<h3 id="projectenvironment">ProjectEnvironment</h3>
+<h3 id="setprojectversion">SetProjectVersion</h3>
+<p>This action provides you with a way to change the source version used inside the
+build directory of this project.
+During initialization, each project is assigned a variant that determines the
+source versions that will be checked out into the build directory.</p>
+<p>Sometimes it can be useful to do comparisons of different source revisions
+inside a single experiment run. This can be achieved using <code>SetProjectVersion</code>.</p>
+<p>Usage:</p>
+<div class="pheasant-fenced-code"><div class="cached"><div class="cell jupyter input"><div class="code"><pre><code class="">from benchbuild.source.base import RevisionStr
+from benchbuild.utils import actions as a
+
+...
+git_commit_hash = &#39;abcdefgh&#39;
+
+actions = [
+  a.Clean(project),
+  a.MakeBuildDir(project),
+  # This uses the default variant of the project (not necessarily &#39;abcdefgh&#39;)
+  a.ProjectEnvironment(project),
+  a.Compile(project),
+  a.Run(project),
+
+  # From here we will work with git sources set to &#39;abcdefgh&#39;
+  a.SetProjectVersion(project, RevisionStr(git_commit_hash))
+  a.Compile(project),
+  a.Run(project)
+]</code></pre></div>
+<div class="report"><p><span class="count">[2]</span>
+<span class="start"></span> (<span class="time"></span>)
+<span class="right"><span class="option">({ p y t h o n })</span> <span class="kernel"></span> (<span class="total"></span>)</span></p></div></div></div></div>
+
+<p>The match is done on all(!) sources of the project. If you happen to find a
+revision string twice in different souces, both will be checked out in the
+build directory.</p>
+<p>The match is done exact and matches agains the <code>source.versions()</code> output of a
+source. Only sources that are marked as expandable (<code>source.is_expandable</code>)
+will be checked.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../concepts/source/" class="btn btn-neutral float-right" title="Source">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../containers/" class="btn btn-neutral" title="Containers"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/PolyJIT/benchbuild" class="fa fa-github" style="color: #fcfcfc"> GitHub</a>
+        </span>
+    
+    
+      <span><a href="../containers/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../concepts/source/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../js/pheasant.js"></script>
+      <script src="../../search/main.js"></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
